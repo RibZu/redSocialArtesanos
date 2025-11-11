@@ -55,14 +55,14 @@ if(isset($_POST['enviarCodigo'])){
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'retrofariaslucero@gmail.com';
-            $mail->Password   = 'dujz eekp xlqw qmik';
+            $mail->Username   = ''; /* aca va el correo electronico */
+            $mail->Password   = ''; /* aca va la contraseña de la aplicacion que se saca desde la cuenta de google */
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
             $mail->CharSet    = 'UTF-8';
 
             //Recipients
-            $mail->setFrom('retrofariaslucero@gmail.com', 'Red Social Artesanos');
+            $mail->setFrom('', 'Red Social Artesanos'); /* aca va el correo electronico */
             $mail->addAddress($email);
 
             //Content
