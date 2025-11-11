@@ -1,0 +1,23 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #fff;
+  margin: 0;
+  padding: 40px;
+}
+
+.home-title {
+    display: flex;      
+    padding: 20px 40px;       
+    border-radius: 15px;       
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+    font-family: 'Arial', sans-serif;
+    color: #333;                
+    justify-content: center;
+}
+
+.home-title h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}

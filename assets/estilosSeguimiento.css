@@ -1,0 +1,236 @@
+  body {
+            background: linear-gradient(135deg, #ffffff 0%, #cfd7d2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .page-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .badge-count {
+            background: linear-gradient(135deg, #58e4f1 0%, #4cada3 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+
+        .btn-back {
+            background: rgb(255, 255, 255);
+            border: 2px solid rgb(30, 107, 67);
+            color: black;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        
+
+        .btn-back:hover {
+            background: rgba(105, 210, 196, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+             color: black;
+            transform: translateY(-2px);
+        }
+
+        .solicitudes-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .solicitud-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solicitud-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #29366e49 0%, #0f5e4e6b 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .solicitud-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .solicitud-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .avatar-wrapper {
+            position: relative;
+        }
+
+        .avatar-solicitud {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .avatar-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 3px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        .user-info h5 {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .user-interest {
+            color: #718096;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .user-interest i {
+            color: #667eea;
+        }
+
+        .request-time {
+            color: #a0aec0;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-aceptar {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+        }
+
+        .btn-aceptar:hover {
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+        }
+
+        .btn-rechazar {
+            background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+        }
+
+        .btn-rechazar:hover {
+            background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 101, 101, 0.4);
+        }
+
+        .empty-state {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 80px 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .empty-state i {
+            font-size: 5rem;
+            background: linear-gradient(135deg, #58e4f1 0%, #4cada3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .empty-state p {
+            color: #718096;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .solicitud-card {
+                padding: 20px;
+            }
+
+            .action-buttons {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .btn-aceptar, .btn-rechazar {
+                flex: 1;
+                padding: 10px 20px;
+            }
+
+            .avatar-solicitud {
+                width: 60px;
+                height: 60px;
+            }
+        }
